@@ -29,7 +29,7 @@ def sort_json_from_jar():
 
     print(f"✅ Работаем с файлом: {jar_path}")
 
-    # 2. Определяем имя мода и инстанса
+    # 2. Определяем имя мода и папки инстанса
     mod_name = os.path.basename(jar_path).replace('.jar', '')
     # Ищем папку "instances" в пути, чтобы получить имя инстанса
     path_parts = jar_path.split(os.sep)
@@ -49,7 +49,7 @@ def sort_json_from_jar():
     with zipfile.ZipFile(jar_path, 'r') as zip_ref:
         zip_ref.extractall(temp_dir)
 
-    # 4. ЗАГРУЖАЕМ МАППИНГ ИЗ ВАШЕГО ФАЙЛА (ручной маппинг!)
+    # 4. ЗАГРУЖАЕМ МАППИНГ ФАЙЛА (ручной маппинг!)
     mapping_file = 'language_mapping.json'
     if not os.path.exists(mapping_file):
         print(f"❌ Ошибка: файл маппинга {mapping_file} не найден в текущей директории!")
