@@ -154,7 +154,7 @@ def sort_json_directly():
 
     print(f"✅ Работаем с файлом: {json_path}")
 
-    # 2. Сортируем файл
+    # 2. Сортируем файл/
     try:
         with open(json_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
